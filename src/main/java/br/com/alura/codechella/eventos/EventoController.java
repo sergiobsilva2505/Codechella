@@ -17,8 +17,8 @@ import java.time.Duration;
 @RestController
 @RequestMapping("/eventos")
 public class EventoController {
-    private final EventoService eventoService;
-    private final Sinks.Many<Evento> eventoSink;
+    private EventoService eventoService;
+    private Sinks.Many<Evento> eventoSink;
 
     public EventoController(EventoService eventoService) {
         this.eventoService = eventoService;
